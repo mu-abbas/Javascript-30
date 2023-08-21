@@ -6,7 +6,7 @@
   "browserslist": "> 0.2%, last 2 versions, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel --open --target default",
+    "start": "parcel",
     "build": "parcel build"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mu-abbas/Javascript-30#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
     "parcel": "^2.9.3"
   }
 }

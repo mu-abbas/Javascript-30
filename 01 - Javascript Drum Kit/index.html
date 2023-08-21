@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit</title>
+    <link rel="icon" href="./src/img/favion-JS3.png" />
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+    <script src="./src/js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="keys">
+        <div class="key" data-key="KeyA">
+          <kbd class="key-letter">a</kbd>
+          <span class="key-sound">clap</span>
+        </div>
+        <div class="key" data-key="KeyS">
+          <kbd class="key-letter">s</kbd>
+          <span class="key-sound">hihat</span>
+        </div>
+        <div class="key" data-key="KeyD">
+          <kbd class="key-letter">d</kbd>
+          <span class="key-sound">kick</span>
+        </div>
+        <div class="key" data-key="KeyF">
+          <kbd class="key-letter">f</kbd>
+          <span class="key-sound">openhat</span>
+        </div>
+        <div class="key" data-key="KeyG">
+          <kbd class="key-letter">g</kbd>
+          <span class="key-sound">boom</span>
+        </div>
+        <div class="key" data-key="KeyH">
+          <kbd class="key-letter">h</kbd>
+          <span class="key-sound">ride</span>
+        </div>
+        <div class="key" data-key="KeyJ">
+          <kbd class="key-letter">j</kbd>
+          <span class="key-sound">snare</span>
+        </div>
+        <div class="key" data-key="KeyK">
+          <kbd class="key-letter">k</kbd>
+          <span class="key-sound">tom</span>
+        </div>
+        <div class="key" data-key="KeyL">
+          <kbd class="key-letter">l</kbd>
+          <span class="key-sound">tink</span>
+        </div>
+      </section>
+      <section class="audios">
+        <audio data-key="KeyA" src="./src/sounds/clap.wav"></audio>
+        <audio data-key="KeyS" src="./src/sounds/hihat.wav"></audio>
+        <audio data-key="KeyD" src="./src/sounds/kick.wav"></audio>
+        <audio data-key="KeyF" src="./src/sounds/openhat.wav"></audio>
+        <audio data-key="KeyG" src="./src/sounds/boom.wav"></audio>
+        <audio data-key="KeyH" src="./src/sounds/ride.wav"></audio>
+        <audio data-key="KeyJ" src="./src/sounds/snare.wav"></audio>
+        <audio data-key="KeyK" src="./src/sounds/tom.wav"></audio>
+        <audio data-key="KeyL" src="./src/sounds/tink.wav"></audio>
+      </section>
+    </main>
+  </body>
+</html>

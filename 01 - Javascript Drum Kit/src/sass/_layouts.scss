@@ -1,0 +1,12 @@
+.main {
+  @include center;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  .keys {
+    @include center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+}
