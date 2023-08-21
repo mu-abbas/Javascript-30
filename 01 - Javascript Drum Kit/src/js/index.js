@@ -3,10 +3,12 @@ window.addEventListener('keydown', function (e) {
   play(key);
 });
 
-window.addEventListener('click', function (e) {
-  const key = e.target.closest('.key');
-  play(key);
-});
+['touchstart', 'click'].forEach(ev =>
+  window.addEventListener(ev, function (e) {
+    const key = e.target.closest('.key');
+    play(key);
+  })
+);
 
 function play(key) {
   if (!key) return;
