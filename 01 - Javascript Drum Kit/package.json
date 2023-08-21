@@ -1,0 +1,25 @@
+{
+  "name": "drum-kit",
+  "version": "1.0.0",
+  "description": "first challenge in javascript-30 challenges",
+  "source": "index.html",
+  "browserslist": "> 0.2%, last 2 versions, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open --target default",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mu-abbas/Javascript-30.git"
+  },
+  "author": "Muhammad Abbas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mu-abbas/Javascript-30/issues"
+  },
+  "homepage": "https://github.com/mu-abbas/Javascript-30#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
