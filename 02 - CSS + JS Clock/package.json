@@ -1,7 +1,7 @@
 {
-  "name": "drum-kit",
+  "name": "css-js-clock",
   "version": "1.0.0",
-  "description": "first challenge in javascript-30 challenges",
+  "description": "second challenge in javascript-30 challenges",
   "source": "index.html",
   "browserslist": "> 0.2%, last 2 versions, not dead",
   "scripts": {
