@@ -9,5 +9,4 @@ function update() {
 
 inputs.forEach(input => {
   input.addEventListener('change', update);
-  input.addEventListener('mousemove', update);
 });

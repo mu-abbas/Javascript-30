@@ -51,12 +51,10 @@ body {
 .label {
   @include center;
   gap: 18px;
-  width: 100px;
   font-size: 24px;
   font-weight: 100;
 
   input[type='color'] {
-    width: 100px;
     border: 0.2px white solid;
     height: 26px;
     margin-top: -18px;
