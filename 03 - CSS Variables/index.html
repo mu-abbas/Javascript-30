@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="./src/index.scss" />
+    <link rel="icon" href="./src/favion-JS3.png" />
+    <script defer src="./src/index.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="primary-heading">Update CSS Variables with <span class="hl">js</span></h1>
+
+      <div class="ranges">
+        <label class="label"
+          >Spacing: <input type="range" name="spacing" min="10" max="200" value="10" data-suffix="px"
+        /></label>
+        <label class="label"
+          >Blur: <input type="range" name="blur" min="0" max="10" value="0" data-suffix="px"
+        /></label>
+      </div>
+
+      <label class="label"><input type="color" name="color" value="#ffc600" /></label>
+
+      <figure>
+        <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" />
+      </figure>
+    </main>
+  </body>
+</html>
