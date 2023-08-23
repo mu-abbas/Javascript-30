@@ -56,15 +56,13 @@ body {
   font-weight: 100;
 
   input[type='color'] {
-    border: 0.2px white solid;
     height: 26px;
     margin-top: -18px;
   }
 }
 
 figure {
-  width: 50%;
-  padding: var(--spacing);
+  width: 80%;
   background-color: var(--color);
 }
 
@@ -72,4 +70,5 @@ img {
   filter: blur(var(--blur));
   width: 100%;
   display: inline-block;
+  padding: var(--spacing);
 }
