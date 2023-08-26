@@ -36,9 +36,9 @@ function displayResults() {
   const html = `
   ${data
     .map(place => {
-      const cityName = place.city;
-      const stateName = place.state;
-      const population = +place.population;
+      let cityName = place.city;
+      let stateName = place.state;
+      let population = +place.population;
 
       if (place.city.toLowerCase().includes(word.toLowerCase())) {
         cityName = place.city.toLowerCase().replace(word.toLowerCase(), `<span class='hl'>${word}</span>`);
