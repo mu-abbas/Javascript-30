@@ -1,0 +1,81 @@
+$primary-color: #ffc600;
+$suggestion-border-color: #d8d8d8;
+$search-border-color: #f7f7f7;
+$suggestion-background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: 600px) {
+    font-size: 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.8rem;
+}
+
+.main {
+  background-color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+}
+
+.search {
+  width: 40rem;
+  height: 7rem;
+  text-align: center;
+  border: 0.8rem solid $search-border-color;
+  border-radius: 0.5rem;
+  font-size: 2.4rem;
+  color: #666;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $suggestion-border-color;
+    font-size: 2.4rem;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.suggestions {
+  list-style: none;
+  width: 30rem;
+  &-item {
+    background: $suggestion-background;
+    width: 100%;
+    padding: 1.2rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 1.4rem;
+    font-weight: 100;
+    border-bottom: 0.1rem solid $suggestion-border-color;
+    &:nth-child(even) {
+      transform: perspective(100) rotateX(5deg) translateY(-0.03rem);
+    }
+    &:nth-child(odd) {
+      transform: perspective(100) rotateX(-5deg) translateY(0.04rem);
+    }
+  }
+}
+
+.hl {
+  background-color: $primary-color;
+}
