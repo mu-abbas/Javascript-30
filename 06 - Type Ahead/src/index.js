@@ -33,19 +33,19 @@ function displayResults() {
     return;
   }
   const data = searchResults(word, cities);
-  let cityName;
-  let stateName;
-  let population;
   const html = `
   ${data
     .map(place => {
+      const cityName = place.city;
+      const stateName = place.state;
+      const population = +place.population;
+
       if (place.city.toLowerCase().includes(word.toLowerCase())) {
         cityName = place.city.toLowerCase().replace(word.toLowerCase(), `<span class='hl'>${word}</span>`);
       }
       if (place.state.toLowerCase().includes(word.toLowerCase())) {
         stateName = place.state.toLowerCase().replace(word.toLowerCase(), `<span class='hl'>${word}</span>`);
       }
-      population = +place.population;
       console.log(population);
       return `
         <li class="suggestions-item">
