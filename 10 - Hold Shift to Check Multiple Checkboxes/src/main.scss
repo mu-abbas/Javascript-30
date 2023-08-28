@@ -1,0 +1,58 @@
+$primary-color: #ffc600;
+@mixin flex {
+  display: flex;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #333;
+  @include flex;
+  min-height: 100vh;
+  background-color: $primary-color;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: block;
+  width: 25%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.2);
+}
+
+.check {
+  @include flex;
+  background-color: white;
+  border-bottom: 0.02rem solid #ddd;
+
+  &-box {
+    margin: 1.8rem;
+  }
+
+  &-label {
+    @include flex;
+    align-items: center;
+    padding: 1rem;
+    border-left: 0.1rem solid #ddd;
+    flex: 1;
+  }
+
+  &-box:checked ~ &-label {
+    text-decoration: line-through;
+  }
+}
