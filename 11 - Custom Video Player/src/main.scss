@@ -1,0 +1,137 @@
+$primary-color: #ffc600;
+$back-ground: rgba(255, 255, 255, 0.8);
+@mixin flex {
+  display: flex;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2.4rem;
+  color: $primary-color;
+}
+
+.main {
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, $primary-color, white, $primary-color);
+}
+
+.player-container {
+  width: 60%;
+  position: relative;
+  overflow: hidden;
+  & video {
+    width: 100%;
+    display: block;
+
+    &:hover ~ .controls {
+      transform: translateY(0);
+    }
+  }
+
+  .controls {
+    @include flex;
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s;
+    transform: translateY(100%) translateY(-0.5rem);
+
+    &:hover {
+      transform: translateY(0);
+    }
+
+    &-btns {
+      @include flex;
+      justify-content: space-around;
+      padding: 0.5rem;
+      .btn {
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        font-size: inherit;
+        cursor: pointer;
+      }
+    }
+
+    .progress-bar {
+      @include flex;
+      background-color: $back-ground;
+      width: 100%;
+      height: 1rem;
+
+      &-played {
+        background-color: $primary-color;
+        height: 100%;
+        flex-basis: 0%;
+      }
+    }
+  }
+}
+
+// this part copied from the original files
+
+input[type='range'] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 30%;
+  margin: 0 0.5rem;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 30%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type='range']::-moz-range-track {
+  width: 30%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+
+input[type='range']::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+}
