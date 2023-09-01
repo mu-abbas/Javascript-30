@@ -5,6 +5,7 @@ const pause = document.querySelector('.pause');
 const ranges = document.querySelectorAll('.ranges');
 const skips = document.querySelectorAll('.skip');
 const video = document.querySelector('video');
+let mousedown = false;
 
 function updateState() {
   video.paused ? video.play() : video.pause();
@@ -32,6 +33,13 @@ function updateBar() {
   progressPlayed.style.flexBasis = `${(this.currentTime / this.duration) * 100}%`;
 }
 
+function updateProgress(e) {
+  if (mousedown || e.type === 'click') {
+    video.currentTime = (e.offsetX / progress.offsetWidth) * video.duration;
+    video.play();
+  } else return;
+}
+
 [video, pause].forEach(ele => {
   ele.addEventListener('click', updateState);
 });
@@ -46,3 +54,8 @@ ranges.forEach(range => {
 });
 
 video.addEventListener('timeupdate', updateBar);
+
+progress.addEventListener('mousemove', updateProgress);
+progress.addEventListener('click', updateProgress);
+progress.addEventListener('mousedown', () => (mousedown = true));
+progress.addEventListener('mouseup', () => (mousedown = false));
