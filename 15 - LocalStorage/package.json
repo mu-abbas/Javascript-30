@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/mu-abbas/Javascript-30#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
     "parcel": "^2.9.3",
     "sass": "^1.66.1"
   }

@@ -1,0 +1,161 @@
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem #3333330a;
+}
+
+$border: 1rem solid #33333329;
+$shadow: 0 0 0 1rem #33333329;
+$border-bottom: 0.1rem solid #ccc;
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #333;
+  font-weight: 100;
+}
+
+.main {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url(./oh-la-la.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include flex;
+  justify-content: start;
+  padding-top: 4rem;
+  gap: 4rem;
+  & svg {
+    width: 16rem;
+    fill: #fff;
+    display: block;
+    padding: 2rem;
+    border: $border;
+    border-radius: 50%;
+  }
+}
+
+.plates {
+  @include flex;
+  background-color: #ffffffd7;
+  padding: 1rem;
+  box-shadow: $shadow;
+  border-radius: 0.1rem;
+  gap: 1rem;
+
+  &-heading {
+    text-transform: uppercase;
+    font-weight: inherit;
+    letter-spacing: -0.1rem;
+  }
+
+  &-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-self: stretch;
+
+    &-item {
+      border-bottom: $border-bottom;
+      padding: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.plate {
+  &-label {
+    font-weight: 100;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1.4rem;
+
+    &::before {
+      content: '❎';
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    .plate-checkbox:checked ~ &::before {
+      content: '✅';
+    }
+  }
+
+  &-checkbox {
+    display: none;
+  }
+}
+
+.add-plate {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  &-text {
+    border: 0.1rem solid #3333330a;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    &::placeholder {
+      color: #ccc;
+    }
+
+    &:focus {
+      @include focus;
+    }
+  }
+
+  &-submit {
+    border: 0.1rem solid #3333330a;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background-color: #aaa;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0.05rem 0.2rem rgba($color: #000000, $alpha: 0.1);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &:focus {
+      @include focus;
+    }
+  }
+}
+
+.remove {
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus {
+    @include focus;
+  }
+}
