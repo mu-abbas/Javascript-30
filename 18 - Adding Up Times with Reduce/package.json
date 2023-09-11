@@ -1,0 +1,26 @@
+{
+  "name": "18---adding-up-times-with-reduce",
+  "version": "1.0.0",
+  "description": "18th chllenge in js30",
+  "source": "index.html",
+  "browserslist": "> 0.2%, last 2 versions, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mu-abbas/Javascript-30.git"
+  },
+  "author": "Muhammad Abbas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mu-abbas/Javascript-30/issues"
+  },
+  "homepage": "https://github.com/mu-abbas/Javascript-30#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "sass": "^1.66.1"
+  }
+}
