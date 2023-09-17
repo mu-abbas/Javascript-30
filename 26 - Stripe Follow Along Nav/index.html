@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav list</title>
+    <link rel="icon" href="./src/favion-JS3.png" />
+    <link rel="stylesheet" href="./src/main.scss" />
+    <script defer src="./src/index.js"></script>
+  </head>
+  <body>
+    <div class="white-marker">
+      <span class="arrow"></span>
+    </div>
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a class="nav-link" href="#">About Me</a>
+            <figure class="nav-list-dropdown about-me">
+              <img class="img" src="https://logo.clearbit.com/wesbos.com" alt="webos photo" />
+              <figcaption class="img-caption">
+                Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't
+                part of web development. It should be though!
+              </figcaption>
+            </figure>
+          </li>
+
+          <li class="nav-list-item">
+            <a class="nav-link" href="#">Courses</a>
+            <ul class="nav-list-dropdown courses">
+              <li>
+                <dfn>rfb</dfn>
+                <a href="https://reactforbeginners.com/">react for beginners</a>
+              </li>
+              <li>
+                <dfn>es6</dfn>
+                <a href="https://es6.io/"> es6 for everyone</a>
+              </li>
+              <li>
+                <dfn>node</dfn>
+                <a href="https://learnnode.com/">learn node</a>
+              </li>
+              <li>
+                <dfn>stpu</dfn>
+                <a href="https://sublimetextbook.com/">sublime text power user</a>
+              </li>
+              <li>
+                <dfn>wtf</dfn>
+                <a href="https://flexbox.io/">what the flexbox?</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-list-item">
+            <a class="nav-link" href="#">Other Links</a>
+            <ul class="nav-list-dropdown other-links">
+              <li><a class="twitter" href="#">twitter</a></li>
+              <li><a class="facebook" href="#">facebook</a></li>
+              <li><a class="blog" href="#">blog</a></li>
+              <li><a class="catalog" href="#">course catalog</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>
